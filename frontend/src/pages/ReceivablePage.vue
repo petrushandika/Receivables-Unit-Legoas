@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-y-2">
     <Header :crumbs="crumbs" />
 
-    <h1 class="text-xl font-semibold py-2">PIUTANG UNIT</h1>
+    <h1 class="text-xl font-semibold py-4">PIUTANG UNIT</h1>
 
     <div class="flex flex-row justify-between py-3 gap-x-3 items-center">
       <SearchInput />
@@ -10,7 +10,7 @@
         @refresh="handleRefresh"
         :isRefreshing="isRefreshing"
       />
-      <ExportDialog />
+      <ExportDialog :rowData="rowData" />
       <AddNewDialog />
     </div>
 
@@ -54,5 +54,3 @@ function handleRefresh() {
   }, 1000);
 }
 </script>
-
-<style scoped></style>
