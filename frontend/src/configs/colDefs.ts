@@ -1,5 +1,3 @@
-// src/configs/colDefs.js
-
 export const colDefs = [
   {
     headerCheckboxSelection: true,
