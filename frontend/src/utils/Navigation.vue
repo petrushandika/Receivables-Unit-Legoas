@@ -10,7 +10,7 @@
       to="/receivable"
       class="block p-2 text-lg font-semibold text-gray-700 hover:bg-gray-200 rounded-md"
     >
-      DAFTAR PIUTANG UNIT
+      PIUTANG UNIT
     </router-link>
   </nav>
 </template>
