@@ -17,11 +17,13 @@
       <div class="grid grid-cols-3 gap-4 py-4">
         <Button
           class="bg-blue-500 text-white rounded px-3 py-2 hover:bg-blue-600"
+          @click="exportToCSV"
         >
           CSV
         </Button>
         <Button
           class="bg-red-500 text-white rounded px-3 py-2 hover:bg-red-600"
+          @click="exportToPDF"
         >
           PDF
         </Button>
@@ -47,6 +49,9 @@ import {
 } from "../ui/dialog";
 import { Button } from "../ui/button";
 import * as XLSX from "xlsx";
+import Papa from "papaparse";
+import jsPDF from "jspdf";
+import "jspdf-autotable"; // Import the autotable plugin
 
 export default {
   components: {
@@ -59,9 +64,41 @@ export default {
     Button,
   },
   props: {
-    rowData: Array,
+    rowData: {
+      type: Array,
+      required: true,
+    },
   },
   methods: {
+    exportToCSV() {
+      const csv = Papa.unparse(this.rowData);
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "data.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    },
+
+    exportToPDF() {
+      const doc = new jsPDF();
+      const columns = ["Column1", "Column2", "Column3"];
+      const rows = this.rowData.map((item) => [
+        item.field1,
+        item.field2,
+        item.field3,
+      ]);
+
+      doc.autoTable({
+        head: [columns],
+        body: rows,
+      });
+
+      doc.save("data.pdf");
+    },
+
     exportToExcel() {
       const ws = XLSX.utils.json_to_sheet(this.rowData);
       const wb = XLSX.utils.book_new();

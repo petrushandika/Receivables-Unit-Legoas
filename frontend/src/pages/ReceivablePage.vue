@@ -11,7 +11,7 @@
         :isRefreshing="isRefreshing"
       />
       <ExportDialog :rowData="rowData" />
-      <AddNewDialog />
+      <AddNewDialog @dataAdded="handleDataAdded" />
     </div>
 
     <Table
@@ -52,5 +52,10 @@ function handleRefresh() {
     isRefreshing.value = false;
     console.log("Data refreshed!");
   }, 1000);
+}
+
+function handleDataAdded(newData) {
+  rowData.value.push(newData);
+  console.log("New data added:", newData);
 }
 </script>

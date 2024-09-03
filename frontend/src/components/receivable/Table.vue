@@ -8,6 +8,7 @@
     :paginationPageSize="paginationPageSize"
     :defaultColDef="defaultColDef"
     :frameworkComponents="frameworkComponents"
+    :rowSelection="'multiple'"
   />
 </template>
 

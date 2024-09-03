@@ -1,11 +1,15 @@
 <template>
-  <div class="grid grid-cols-2 gap-4 py-4">
+  <form
+    class="grid grid-cols-2 gap-4 py-4"
+    @submit.prevent="handleSave"
+  >
     <div class="space-y-4">
       <div class="flex flex-col gap-y-2">
         <Label for="noKewajiban">No. Kewajiban</Label>
         <Input
           id="noKewajiban"
           class="w-full rounded"
+          v-model="formData.noKewajiban"
         />
       </div>
       <div class="flex flex-col gap-y-2">
@@ -13,6 +17,7 @@
         <Input
           id="noPolisi"
           class="w-full rounded"
+          v-model="formData.noPolisi"
         />
       </div>
       <div class="flex flex-col gap-y-2">
@@ -20,6 +25,7 @@
         <Input
           id="pemiliki"
           class="w-full rounded"
+          v-model="formData.pemiliki"
         />
       </div>
       <div class="flex flex-col gap-y-2">
@@ -27,6 +33,7 @@
         <Input
           id="peserta"
           class="w-full rounded"
+          v-model="formData.peserta"
         />
       </div>
       <div class="flex flex-col gap-y-2">
@@ -34,6 +41,7 @@
         <Input
           id="nomorVA"
           class="w-full rounded"
+          v-model="formData.nomorVA"
         />
       </div>
       <div class="flex flex-col gap-y-2">
@@ -41,6 +49,7 @@
         <Input
           id="hargaTerbentuk"
           class="w-full rounded"
+          v-model="formData.hargaTerbentuk"
         />
       </div>
     </div>
@@ -51,6 +60,7 @@
         <Input
           id="biayaAdmin"
           class="w-full rounded"
+          v-model="formData.biayaAdmin"
         />
       </div>
       <div class="flex flex-col gap-y-2">
@@ -58,6 +68,7 @@
         <Input
           id="ppn"
           class="w-full rounded"
+          v-model="formData.ppn"
         />
       </div>
       <div class="flex flex-col gap-y-2">
@@ -65,6 +76,7 @@
         <Input
           id="total"
           class="w-full rounded"
+          v-model="formData.total"
         />
       </div>
       <div class="flex flex-row justify-between gap-x-3">
@@ -74,6 +86,7 @@
             id="tanggalLelang"
             class="w-full rounded"
             type="date"
+            v-model="formData.tanggalLelang"
           />
         </div>
         <div class="flex flex-col gap-y-2 w-full">
@@ -82,6 +95,7 @@
             id="tanggalJatuhTempo"
             class="w-full rounded"
             type="date"
+            v-model="formData.tanggalJatuhTempo"
           />
         </div>
       </div>
@@ -91,6 +105,7 @@
           id="tanggalLunas"
           class="w-full rounded"
           type="date"
+          v-model="formData.tanggalLunas"
         />
       </div>
       <div class="flex flex-col gap-y-2">
@@ -98,13 +113,15 @@
         <Input
           id="status"
           class="w-full rounded"
+          v-model="formData.status"
         />
       </div>
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
+import { ref } from "vue";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 
@@ -112,6 +129,51 @@ export default {
   components: {
     Input,
     Label,
+  },
+  setup() {
+    const formData = ref({
+      noKewajiban: "",
+      noPolisi: "",
+      pemiliki: "",
+      peserta: "",
+      nomorVA: "",
+      hargaTerbentuk: "",
+      biayaAdmin: "",
+      ppn: "",
+      total: "",
+      tanggalLelang: "",
+      tanggalJatuhTempo: "",
+      tanggalLunas: "",
+      status: "",
+    });
+
+    const rowData = ref([]);
+
+    const handleSave = () => {
+      rowData.value.push({ ...formData.value });
+      formData.value = {
+        noKewajiban: "",
+        noPolisi: "",
+        pemiliki: "",
+        peserta: "",
+        nomorVA: "",
+        hargaTerbentuk: "",
+        biayaAdmin: "",
+        ppn: "",
+        total: "",
+        tanggalLelang: "",
+        tanggalJatuhTempo: "",
+        tanggalLunas: "",
+        status: "",
+      };
+      console.log("Data saved:", rowData.value);
+    };
+
+    return {
+      formData,
+      rowData,
+      handleSave,
+    };
   },
 };
 </script>

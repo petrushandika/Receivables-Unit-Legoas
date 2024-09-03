@@ -1,8 +1,12 @@
 export const colDefs = [
   {
+    field: "",
+    headerName: "",
+    filter: false,
     headerCheckboxSelection: true,
     checkboxSelection: true,
-    width: 100,
+    pinned: "left",
+    width: 50,
   },
   {
     field: "noKewajiban",

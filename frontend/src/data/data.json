@@ -26,8 +26,8 @@
     "total": 30300000,
     "tanggalLelang": "2024-09-02",
     "tanggalJatuhTempo": "2024-09-16",
-    "tanggalLunas": "2024-09-12",
-    "status": "Belum Lunas"
+    "tanggalLunas": "",
+    "status": "Konfirmasi Pembayaran"
   },
   {
     "noKewajiban": "KW-003",
@@ -42,7 +42,7 @@
     "tanggalLelang": "2024-09-03",
     "tanggalJatuhTempo": "2024-09-17",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-004",
@@ -72,7 +72,7 @@
     "tanggalLelang": "2024-09-05",
     "tanggalJatuhTempo": "2024-09-19",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-006",
@@ -102,7 +102,7 @@
     "tanggalLelang": "2024-09-07",
     "tanggalJatuhTempo": "2024-09-21",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-008",
@@ -132,7 +132,7 @@
     "tanggalLelang": "2024-09-09",
     "tanggalJatuhTempo": "2024-09-23",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-010",
@@ -162,7 +162,7 @@
     "tanggalLelang": "2024-09-11",
     "tanggalJatuhTempo": "2024-09-25",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-012",
@@ -192,7 +192,7 @@
     "tanggalLelang": "2024-09-13",
     "tanggalJatuhTempo": "2024-09-27",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-014",
@@ -207,7 +207,7 @@
     "tanggalLelang": "2024-09-14",
     "tanggalJatuhTempo": "2024-09-28",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-015",
@@ -222,7 +222,7 @@
     "tanggalLelang": "2024-09-15",
     "tanggalJatuhTempo": "2024-09-29",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-016",
@@ -237,7 +237,7 @@
     "tanggalLelang": "2024-09-16",
     "tanggalJatuhTempo": "2024-09-30",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-017",
@@ -252,7 +252,7 @@
     "tanggalLelang": "2024-09-17",
     "tanggalJatuhTempo": "2024-10-01",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-018",
@@ -267,7 +267,7 @@
     "tanggalLelang": "2024-09-18",
     "tanggalJatuhTempo": "2024-10-02",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-019",
@@ -282,7 +282,7 @@
     "tanggalLelang": "2024-09-19",
     "tanggalJatuhTempo": "2024-10-03",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   },
   {
     "noKewajiban": "KW-020",
@@ -297,6 +297,6 @@
     "tanggalLelang": "2024-09-20",
     "tanggalJatuhTempo": "2024-10-04",
     "tanggalLunas": "",
-    "status": "Dalam Proses"
+    "status": "Proses Pembayaran"
   }
 ]
