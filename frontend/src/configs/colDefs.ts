@@ -1,3 +1,7 @@
+import ActionMenu from "../components/receivable/ActionMenu.vue";
+import DropdownStatus from "../components/receivable/DropdownStatus.vue";
+import Status from "../utils/Status.vue";
+
 export const colDefs = [
   {
     field: "",
@@ -98,5 +102,30 @@ export const colDefs = [
     filter: true,
     floatingFilter: true,
     headerClass: "text-center",
+    editable: true,
+    cellEditorFramework: DropdownStatus,
+    Status,
+    cellRendererFramework: DropdownStatus,
+  },
+  {
+    field: "actions",
+    headerName: "Action",
+    filter: false,
+    width: 100,
+    cellRendererFramework: ActionMenu,
+    cellRendererParams: {
+      cellRendererParams: {
+        onEdit: (params: any) => handleEdit(params),
+        onDelete: (params: any) => handleDelete(params),
+      },
+    },
   },
 ];
+
+function handleEdit(params: any) {
+  console.log("Edit", params.value);
+}
+
+function handleDelete(params: any) {
+  console.log("Delete", params.value);
+}

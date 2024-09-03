@@ -19,6 +19,7 @@
       :colDefs="colDefs"
       :pagination="pagination"
       :paginationPageSize="paginationPageSize"
+      :paginationPageSizeSelector="paginationPageSizeSelector"
       :defaultColDef="defaultColDef"
       :frameworkComponents="frameworkComponents"
     />
@@ -42,6 +43,7 @@ const crumbs = [{ label: "DAFTAR PIUTANG UNIT", url: "/receivable" }];
 const rowData = ref(data);
 const pagination = ref(true);
 const paginationPageSize = ref(10);
+const paginationPageSizeSelector = ref([10, 50, 100, 500]);
 const defaultColDef = ref({ sortable: true, filter: true });
 const frameworkComponents = ref({});
 const isRefreshing = ref(false);
